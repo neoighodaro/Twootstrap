@@ -270,11 +270,8 @@ class Twootstrap_Twootstrap_Asset {
 	 * @param boolean $print
 	 * @return string
 	 */
-	public function styles($asset_tag = NULL, $print = FALSE)
-	{
-		// Use the default tag if none is provided
-		$asset_tag = (is_null($asset_tag) ? 'default':$asset_tag);
-		
+	public function styles($asset_tag = 'default', $print = FALSE)
+	{	
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('styles', $asset_tag);
@@ -300,11 +297,8 @@ class Twootstrap_Twootstrap_Asset {
 	 * @param boolean $print
 	 * @return string
 	 */
-	public function scripts($asset_tag = NULL, $print = FALSE)
-	{
-		// Use the default tag if none is provided
-		$asset_tag = (is_null($asset_tag) ? 'default':$asset_tag);
-		
+	public function scripts($asset_tag = 'default', $print = FALSE)
+	{	
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('scripts', $asset_tag);
