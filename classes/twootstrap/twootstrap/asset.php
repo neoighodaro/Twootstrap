@@ -272,6 +272,9 @@ class Twootstrap_Twootstrap_Asset {
 	 */
 	public function styles($asset_tag = NULL, $print = FALSE)
 	{
+		// Use the default tag if none is provided
+		$asset_tag = (is_null($asset_tag) ? 'default':$asset_tag);
+		
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('styles', $asset_tag);
@@ -299,6 +302,9 @@ class Twootstrap_Twootstrap_Asset {
 	 */
 	public function scripts($asset_tag = NULL, $print = FALSE)
 	{
+		// Use the default tag if none is provided
+		$asset_tag = (is_null($asset_tag) ? 'default':$asset_tag);
+		
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('scripts', $asset_tag);
@@ -351,7 +357,6 @@ class Twootstrap_Twootstrap_Asset {
 			{
 				if ($asset_tag === $asset['tag'])
 				{
-					var_dump($asset['tag']);
 					if ($asset_type === 'styles')
 					{
 						// Asset HTML result
