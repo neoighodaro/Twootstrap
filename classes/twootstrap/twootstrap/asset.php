@@ -270,8 +270,8 @@ class Twootstrap_Twootstrap_Asset {
 	 * @param boolean $print
 	 * @return string
 	 */
-	public function styles($asset_tag = NULL, $print = FALSE)
-	{
+	public function styles($asset_tag = 'default', $print = FALSE)
+	{	
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('styles', $asset_tag);
@@ -297,8 +297,8 @@ class Twootstrap_Twootstrap_Asset {
 	 * @param boolean $print
 	 * @return string
 	 */
-	public function scripts($asset_tag = NULL, $print = FALSE)
-	{
+	public function scripts($asset_tag = 'default', $print = FALSE)
+	{	
 		// Return the HTML
 		if ($print === FALSE)
 			return $this->_fetch_assets('scripts', $asset_tag);
@@ -351,7 +351,6 @@ class Twootstrap_Twootstrap_Asset {
 			{
 				if ($asset_tag === $asset['tag'])
 				{
-					var_dump($asset['tag']);
 					if ($asset_type === 'styles')
 					{
 						// Asset HTML result
